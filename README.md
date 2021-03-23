@@ -1,8 +1,10 @@
 # 안진홍 [201840121]
+## [3월 23일]
+
 
 ## [03월 16일]
 > 오늘 배운 내용 요약<br>
-js node를 통해 출력확인하는 법<br>
+js node를 통해 출력확인하는 법
 js 출력문 예시- console.log('hello world...!')<br>
 js 키워드: break, else, instanceof, true 등등 여러가지있음 p.49 참조<br>
  <strong>식별자 규칙</strong>
