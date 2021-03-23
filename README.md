@@ -14,15 +14,15 @@ console.log("안녕하세요"[0]);
 * js node를 통해 출력확인하는 법<br>
   js 출력문 예시- console.log('hello world...!')
 * js 키워드: break, else, instanceof, true 등등 여러가지있음 p.49 참조<br>
- * <strong>식별자 규칙</strong><br>
+ * 식별자 규칙
   1.키워드 사용하면 안됨
   2.특수문자는 _와$만 허용
   3.숫자로 시작하면 안됨
-  4.공백 입력X<br>
-* <strong>주석 처리 방법</strong><br>
+  4.공백 입력X
+* 주석 처리 방법
 1.한줄 주석 처리 : //주석
 2.여러줄 주석 처리
 /*
 주석
 주석
-*/<br>
+*/
