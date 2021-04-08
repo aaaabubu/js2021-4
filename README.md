@@ -59,7 +59,7 @@ console.log(i);<br>
  let a = 10;<br>
 }<br>
 console.log(a); <--이러면 오류남 <br>
-for (let i = 0l i < 3; i++) {<br>
+for (let i = 0; i < 3; i++) {<br>
 console.log(i);<br>
 }<br>
 console.log(i); <-- 이것도 오류남<br>
