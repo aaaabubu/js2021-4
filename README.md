@@ -1,4 +1,81 @@
 # 안진홍 [201840121]
+## [04월 06일]
+>오늘 배운 내용 요약
+<b>역 for문 반복문</b><br>
+// 배열을 생성<br>
+let arrary = [1, 2, 3, 4, 5, 6];<br>
+// 요소의 길이를 출력
+for (let i = array.length - 1; i >= 0; i--){<br>
+console.log(array[i]);<br>
+}<br>
+<b>for in 반복문과 for of 반복문</b><br>
+<b>for in</b><br>
+//변수를 선언<br>
+let array = ["사과", "배", "포도", "딸기", "바나나"];<br>
+//반복을 수행<br>
+for (let i in array) {<br>
+//출력합니당<br>
+console.log('${i}번째 요소: &{array[i]}');<br>
+}<br>
+<b>for of</b><br>
+//반복을 수행<br>
+for (let item of array) {<br>
+//수행합니당<br>
+console.log(item);
+}<br>
+<b>중첩 반복문</b><br>
+let output = "";<br>
+for (let i = 0; i < 10; i++) {<br>
+for (let j = 0; j < i + 1; j++) {<br>
+p += "*";<br>
+}<br>
+p += "\n";<br>
+}<br>
+console.log(output);<br>
+<b>break문</b><br>
+break 키워드는 switch조건문이나 반복문을 벗어날때 사용<br>
+let i = 0;<br>
+let array = [1, 31, 273, 57, 11, 22];<br>
+let output;<br>
+while (true) {<br>
+if (array[i] % 2 == 0) {<br>
+output = array[i];<br>
+break;<br>
+}<br>
+i = i + 1;<br>
+}<br>
+console.log('가장 먼저 발견환 짝수는 달러{output} 입니다');<br>
+<b>continue문</b><br>
+for (let i = 1; i < 10; i++) {<br>
+if (i % 2 == 0) {<br>
+continue;<br>
+}<br>
+console.log(i);<br>
+}<br>
+<b>스코프</b><br>
+'스코프 == 블록' 블록= 중괄호에 둘러싸는 부분{}<br>
+블록 내부에 선언된 변수는 해당 변수 내부에서만 사용 가능<br>
+{<br>
+ let a = 10;<br>
+}<br>
+console.log(a); <--이러면 오류남 <br>
+for (let i = 0l i < 3; i++) {<br>
+console.log(i);<br>
+}<br>
+console.log(i); <-- 이것도 오류남<br>
+<b>호이스팅</b><br>
+해당 블록에서 사용할 변수를 미리 확인해서 정리하는 작업.<br>
+let a = 1;<br>
+{<br>
+console.log(a);<br>
+let a = 2;<br>
+}<br>
+
+
+
+
+
+
 ## [03월 30일]
 >오늘 배운 내용 요약
 * 조건문: switch, 삼항 연산자, 짧은 초기화 조건문( || 연산자 이용 )<br>

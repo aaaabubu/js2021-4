@@ -7,4 +7,4 @@ switch (input % 2 ){
   case 01:
       console.log("홀수");
       break;
-}ch3.js
+}
