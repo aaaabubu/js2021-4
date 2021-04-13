@@ -1,4 +1,88 @@
 # 안진홍 [201840121]
+## [04월 13일]
+>오늘 배운 내용 요약
+#### <함수 생성 방법><br>
+#### 익명 함수: 중괄호 안에 코드를 넣음<br>
+let <함수 이름> = function () {};<br>
+사용예시:<br>
+let 함수 = fuction() {<br>
+  console.log("함수의 첫 번째 줄");<br>
+  console.log("함수의 두 번째 줄");<br>
+}; -----함수생성<br>
+함수(); -----함수 호출<br>
+console.log(함수); -----함수 자체 출력<br>
+####<b>리터럴:</b> 변수안에 들어 있는 상태가 아니라, 문자 그대로 자료를 나타내는 것
+#### 선언적 함수: 익명 함수와 마찬가지로 중괄호 내부에 코드를 넣음<br>
+function <함수 이름>(){}<br>
+사용예시:<br>
+function 함수 {<br>
+  console.log("함수의 첫 번째 줄");<br>
+  console.log("함수의 두 번째 줄");<br>
+}; -----함수 생성<br>
+함수(); -----함수 호출<br>
+console.log(함수); -----함수 출력<br>
+#### 화살표 함수: 하나의 표현식을 리턴하는 함수를 만들때 중괄호 생략<br>
+() => {}<br>
+사용예시:<br>
+let 함수 = () => {<br>
+  console.log("함수의 첫 번째 줄");<br>
+  console.log("함수의 두 번째 줄");<br>
+};<br>
+함수();<br>
+console.log(함수);<br>
+####<b><함수의 기본 형태></b><br>
+function<함수이름>(<매개 변수>) {<br>
+  <함수 코드><br>
+  return <리턴 값><br>
+}<br>
+#### power()함수 <br>
+매개 변수로 넣은 값을 제곱해서 반환<br>
+funcion power(x) {<br>
+  return x * x; <br>
+}<br>
+console.log(power(10));<br>
+console.log(power(20));<br>
+#### 매개 변수가 여러개인 함수
+function multiply(x,y) {<br>
+  return x * y;<br>
+}<br>
+console.log(multiply(52,273));<br>
+console.log(multiply(103,32));<br>
+#### 리턴 없는함수
+function print(message) {<br>
+  console.log('"${message}"(이)라고 말했습니다!');<br>
+}<br>
+print("안녕하세요");<br>
+print("뿌잉뿌잉");<br>
+#### <함수의 기본 활용 형태><br>
+매개변수와 리턴 - min부터 max까지 숫자를 더해 리턴하는 함수를 생성하고 호출 -
+<br>
+function sum(min, max) {<br>
+  let output = 0;<br>
+  for (let i = min; i <= max; i++) {<br>
+  output += i;<br>
+  }<br>
+  return output;<br>
+}<br>
+comsole.log(sum(1, 100));<br>
+#### 함수 매개 변수 초기화<br>
+실행하면 undefined 출력.<br>
+#### <콜백 함수><br>
+함수에 저장된 변수를 매개 변수로 전달되게함<br>
+// 함수를 선언<br>
+function callTenTimes(callback) {<br>
+  // 10회 반복.<br>
+  for (let i = 0; i < 10; i++) {<br>
+  //매개변수로 전달된 함수 호출<br>
+  callback();<br>
+  }<br>
+}<br>
+//변수를 선언<br>
+callTenTimes(function() {<br>
+  console.log('함수 호툴');<br>
+});<br>
+
+
 ## [04월 06일]
 >오늘 배운 내용 요약
 <b>역 for문 반복문</b><br>
