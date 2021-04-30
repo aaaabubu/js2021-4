@@ -1,4 +1,33 @@
 # 안진홍 [201840121]
+## [04월 27일]
+>오늘 배운 내용 요약
+#### <타이머 함수><br>
+타이머 설정 함수<br>
+1.setTimeout(함수,시간): 특정 시간 후에 함수를 실행합니다.<br>
+2.setInterval(함수,시간): 특정 시간마다 함수를 실행합니다.<br>
+타이머 제거 함수<br>
+1.clearInterval(아이디): 특정 시간마다 실행하던 함수 호출을 정지합니다.<br>
+#### <익명 함수와 화살표 함수의 차이><br>
+익명함수: function() {} 과 화살표 함수: () => {} 거의 비슷한 기능 수행.<br>
+But 한가지 차이 있음. 바로 내부에서 thid키워드가 가지는 의미!!<br>
+#### <객체><br>
+<b><객체기본></b><br>
+let array = ['사과', '바나나', '망고', '딸기'];<br>
+array[0] -> '사과'<br>
+array[1] -> '망고'<br>
+<b><속성과 메소드></b><br>
+//객체 선언<br>
+let object = {<br>
+  name: '바나나',<br>
+  price: 1200,<br>
+  print: function() <br>{
+    console.log(`$(this.name)의 가격은 $(this.price)원입니다.`)<br>
+  }<br>
+};<br>
+//메소드 호출<br>
+object.print();<br>
+object 속성: name,price,print<br>
+
 ## [04월 13일]
 >오늘 배운 내용 요약
 #### <함수 생성 방법><br>
