@@ -1,4 +1,95 @@
 # 안진홍 [201840121]
+## [05월 04일]
+>오늘 배운 내용 요약
+#### <생성자 함수><br>
+생성자 함수는 대문자로 시작하는 이름을 사용<br>
+function Product(name, price) {<br>
+  this.name = name;<br>
+  this.price = price<br>
+}<br>
+<프로토타입><br>
+모든 합수가 가지고 있는 속성으로 해당 함수를 생성자 함수로 사용했을 때만 의미 있음<br>
+//생성자 함수<br>
+function Product(name, price) {<br>
+    this.name = name;<br>
+    this.price = prcie;<br>
+  }<br>
+
+  //포로토 타입에 메소드를 선언<br>
+  Product.prototype.print = function {<br>
+    console.log('$(product.name)의 가격은 $(product.price)원입니다.');<br>
+  }<br>
+
+  //객체 생성<br>
+  let product = new Product("바나나", 1200);<br>
+  
+  //메소드 호출<br>
+  product.print();<br>
+  ## <표준 내장 객체><br>
+  자바스크립트에서 (숫자,문자열,불,객체,함수,undefined) 중에서 <b>숫자,문자열,불을 기본자료형이라고함</b><br>
+  BUT 자바스크립트에서 숫자를 만들때 밑에 코드처럼 Number, String, Boolean 생성자 함수를 사용해서<br>
+  숫자,문자열,불을 생성할때 typeof를 사용하면 'object' 문자 출력. 즉 객체라는것임<br>
+  // 객체 자료형<br>
+  let number = new Number(273);<br>
+  let string = new String('안녕하세요');<br>
+  let boolean = new Boolean(true);<br>
+
+  //자료형 출력<br>
+  console.log(typeof number);<br>
+  console.log(typeof string);<br>
+  console.log(typeof boolean);<br>
+  //출력문<br>
+  object<br>
+  object<br>
+  object<br>
+  #### <Number 객체><br>
+  Number 객체는 자바스크립트에서 숫자를 표현할때 사용<br>
+  Number 객체는 두가지 방법으로 생성 가능<br>
+  let numberFromLiteral = 273;<br>
+  let numberFromConstructor = new Number(273);<br>
+  Number 객체가 가진 메소드의 종류
+  toExponential(): 숫자를 지수 표시로 나타낸 문자열을 리턴.<br>
+  toFixed(): 숫자를 고정소수점 표시로 나타낸 문자열을 리턴.<br>
+  toPrecision(): 숫자의 길이에 따라 지수 표시 또는 고정소수점 표시로 나타낸 문자열을 리턴.<br>
+  toFixed() 메소드를 사용해 소수점 자릿수 자르는 방법<br>
+  //변수 선언<br>
+  let number = 273.5210332;<br>
+  //출력<br>
+  console.log(number.toFixed(1));<br>
+  console.log(number.toFixed(4));<br>
+  //출력문<br>
+  273.5<br>
+  273.5210<br>
+  Number 생성자 함수의 속성<br>
+  MAX_VALUE: 자바스크립트의 숫자가 나타낼수있는 최대 숫자.<br>
+  MIN_VALUE: 자바스크립트의 숫자가 나타낼수있는 최소 숫자.<br>
+  NaN: 자바스크립트의 숫자로 나타낼수없는 숫자.<br>
+  POSITIVE_INFINITY: 양의 무한대 숫자.<br>
+  NEGATIVE_INFINITY: 음의 무한대 숫자.<br>
+  #### <String 객체><br>
+  String 객체는 자바스크립트에서 가장 많이 사용하는 내장 객체이고 두가지 방법으로 생성 가능.<br>
+  let stringFromLiteral = '안녕하세요';<br>
+  let stringFromConstructor = new String('안녕하세요');<br>
+  <b>String 객체는 length 속성을 가짐</b><br>
+  length: 문자열의 길이를 나타냄.<br>
+  String 객체의 메소드<br>
+  charAt(position): position에 위치하는 문자를 리턴.<br>
+  charCodeAt(position): position에 위치하는 문자의 유니코드 번호를 리턴.<br>
+  concat(args): 매개 변수로 입력한 문자열을 이어 리턴.<br>
+  indexOf(searchString, position): 앞에서부터 일치하는 문자열의 위치를 리턴.<br>
+  lastIndexOf(searchString, position): 뒤에서부터 일치하는 문자열의 위치를 리턴.<br>
+  match(regExp): 문자열 안에 regExp가 있는지 확인.<br>
+  replace(regExo, replacement): regExp를 replacement로 바꾼후 리턴.<br>
+  search(regExp): regExp와 일치하는 문자열의 위치를 리턴.<br>
+  slice(start, end): 특정 위치의 문자열을 추출해 리턴.<br>
+  split(separator, limit): separator로 문자열을 잘라 배열을 리턴.<br>
+  substr(start, count): start부터 count만큼 문자열을 잘라서 리턴.<br>
+  substring(start, end): start부터 end까지 문자열을 잘라서 리턴.<br>
+  toLowerCase(): 문자열을 소문자로 바꾸어 리턴.<br>
+  toUpperCase(): 문자열을 대문자로 바꾸어 리턴.<br>
+  <b>String 객체의 메소드는 모두 '자기 자신을 변경하는 것'이 아니라 '변경된 값을 리턴'하는것</b><br>
+  자기자신을 변화시키는 메소드를 '파괴적 메소드'라고 하고 변화시키지 않고 리턴하는 메소드를'비파괴적 메소드' 라고 함.<br>
+
 ## [04월 27일]
 >오늘 배운 내용 요약
 #### <타이머 함수><br>
