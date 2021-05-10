@@ -47,11 +47,11 @@ function Product(name, price) {<br>
   Number 객체는 두가지 방법으로 생성 가능<br>
   let numberFromLiteral = 273;<br>
   let numberFromConstructor = new Number(273);<br>
-  Number 객체가 가진 메소드의 종류
+  <b>Number 객체의 메소드</b><br>
   toExponential(): 숫자를 지수 표시로 나타낸 문자열을 리턴.<br>
   toFixed(): 숫자를 고정소수점 표시로 나타낸 문자열을 리턴.<br>
   toPrecision(): 숫자의 길이에 따라 지수 표시 또는 고정소수점 표시로 나타낸 문자열을 리턴.<br>
-  toFixed() 메소드를 사용해 소수점 자릿수 자르는 방법<br>
+  <b>toFixed() 메소드를 사용해 소수점 자릿수 자르는 방법</b><br>
   //변수 선언<br>
   let number = 273.5210332;<br>
   //출력<br>
@@ -60,7 +60,7 @@ function Product(name, price) {<br>
   //출력문<br>
   273.5<br>
   273.5210<br>
-  Number 생성자 함수의 속성<br>
+  <b>Number 생성자 함수의 속성</b><br>
   MAX_VALUE: 자바스크립트의 숫자가 나타낼수있는 최대 숫자.<br>
   MIN_VALUE: 자바스크립트의 숫자가 나타낼수있는 최소 숫자.<br>
   NaN: 자바스크립트의 숫자로 나타낼수없는 숫자.<br>
@@ -72,7 +72,7 @@ function Product(name, price) {<br>
   let stringFromConstructor = new String('안녕하세요');<br>
   <b>String 객체는 length 속성을 가짐</b><br>
   length: 문자열의 길이를 나타냄.<br>
-  String 객체의 메소드<br>
+  <b>String 객체의 메소드</b><br>
   charAt(position): position에 위치하는 문자를 리턴.<br>
   charCodeAt(position): position에 위치하는 문자의 유니코드 번호를 리턴.<br>
   concat(args): 매개 변수로 입력한 문자열을 이어 리턴.<br>
