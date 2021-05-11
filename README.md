@@ -1,4 +1,87 @@
 # 안진홍 [201840121]
+## [05월 11일]
+>오늘 배운 내용 요약
+##### <Date 객체><br>
+<b>Date 4가지 방법으로 생성 가능.</b><br>
+new Date(): 현재 시간으로 Date 객체를 생성.<br>
+new Date(<유닉스 타임>): 유닉스 타임(1970년 1월 1일 00시 00분 00초부터 경과한 밀리초)으로 Date 객체를 생성.<br>
+new Date(<시간 문자열>): 문자열로 Date 객체를 생성.<br>
+new Date(<년>, <월-1>, <일>, <시간>, <분>, <초>, <밀리초>): 시간요소(년, 월-1, 일, 시간, 분, 초, 밀리초)를 기반으로 Date 객체를 생성.<br>
+<b>주의: Month를 나타내는 '월'은 0부터 시작 따라서 월-1필수!!</b><br>
+* Date 객체 생성 예시코드<br>
+
+        //현재 시간을 기반으로 Date 객체를 생성.
+        let dateA = new Date();
+        console.log(dateA);
+
+        //유닉스 타임(1970년 1월 1일 00시 00분 00초부터 경과한 밀리초)
+        let dateB = new Date(692281800000);
+        console.log(dateB);
+
+        //문자열을 기반으로 Date 객체를 생성.
+        let dateC = new Date("December 9, 1991 21:30:00");
+        console.log(dateC);
+
+        //시간 요소(년, 월-1, 일, 시간, 분, 초, 밀리초)를 기반으로 Date 객체를 생성.
+        let dateD = new Date(1991, 12-1, 9, 21, 30, 0, 0);
+        console.log(dateD);
+실행 결과<br>
+Tue May 11 2021 17:38:22 GMT+0900 (대한민국 표준시)<br>
+Mon Dec 09 1991 21:30:00 GMT+0900 (대한민국 표준시)<br>
+Mon Dec 09 1991 21:30:00 GMT+0900 (대한민국 표준시)<br>
+Mon Dec 09 1991 21:30:00 GMT+0900 (대한민국 표준시)<br>
+* 시간 더하기<br>
+
+         let date = new Date();
+
+         console.log(date);
+
+         date.setFullYear(date.getFullYear()+ 1);
+         date.setMonth(date.getMonth() + 1);
+         date.setDate(date.getDate() + 1);
+
+         console.log(date);
+* 시간 간격 구하기<br>
+
+        let now = new Date();
+        let before = new Date('Feburary 5, 1999');
+
+        let interval = now.getTime() - before.getTime();
+        console.log(interval);
+        interval = Math.floor(interval / (1000 * 60 * 60 * 24)); <---1000 * 60 * 60 * 24 요거 꼭 기억!
+
+        console.log(`태어나서 ${interval}일 지났습니다.`);
+실행 결과<br>
+16739144290<br>
+태어나서 193일 지났습니다.<br>
+
+####<Array 객체><br>
+<b>Array 객체 메소드</b><br>
+
+     concat():    매개변수로 입력한 배열의 요소를 모두 합쳐 배열을 만들어 리턴.
+     join():      배열 안의 모든 요소를 문자열로 만들어 리턴.
+     pop()*:      배열의 마지막 요소를 제거하고 리턴.
+     push()*:     배열의 마지막 부분에 새로운 요소를 추가.
+     reverse()*:  배열의 요소 순서를 뒤집음.
+     slice():     배열 요소의 지정한 부분을 리턴.
+     sort()*:     배열의 요소를 정렬.
+     splice()*:   배열 요소의 지정한 부분을 삭제하고 삭제한 요소를 리턴.
+                                                                      *표시된 메소드는 자기 자신을 변화시킴
+* ECMAScript5에서 추가된 메소드<br>
+
+      forEach():  배열의 요소를 하나씩 뽑아 반복을 돌림.
+      map():      콜백 함수에서 리턴하는 것을 기반으로 새로운 배열을 만듦.
+      filter():   콜백 함수에서 true를 리턴하는 것으로만 새로운 배열을 만들어 리턴.
+
+      
+
+        
+                
+
+    
+
+
+
 ## [05월 04일]
 >오늘 배운 내용 요약
 #### <생성자 함수><br>

@@ -190,11 +190,91 @@ print("사과"); */
 }
 console.log(power(2,3)); */
 
-let foo = setInterval (function() {
+/* et foo = setInterval (function() {
     console.log("출력합니다.");
 }, 1000);
 
 setTimeout (function() {
-    clearInterval(foo);
-    console.log("끝났습니다.");
-}, 3000);
+  clearInterval(foo);
+  console.log("끝났습니다.");
+}, 3000); */
+
+// 7-5 Date 에제 생성
+// let dateA = new Date();
+// console.log(dateA.getHours());
+// console.log(dateA);
+
+// 7-5코드
+// 현재 시간을 기반으로 Date 객체를 생성.
+// let dateA = new Date();
+// console.log(dateA);
+
+// //유닉스 타임(1970년 1월 1일 00시 00분 00초부터 경과한 밀리초)
+// let dateB = new Date(692281800000);
+// console.log(dateB);
+
+// //문자열을 기반으로 Date 객체를 생성.
+// let dateC = new Date("December 9, 1991 21:30:00");
+// console.log(dateC);
+
+// //시간 요소(년, 월-1, 일, 시간, 분, 초, 밀리초)를 기반으로 Date 객체를 생성.
+// let dateD = new Date(1991, 12-1, 9, 21, 30, 0, 0);
+// console.log(dateD);
+
+// 예제 7-6
+// let date = new Date();
+
+// console.log(date);
+
+// date.setFullYear(date.getFullYear()+ 1);
+// date.setMonth(date.getMonth() + 1);
+// date.setDate(date.getDate() + 1);
+
+// console.log(date);
+
+// 예제 7-7
+let now = new Date();
+let before = new Date('Octobor 30, 2020');
+
+let interval = now.getTime() - before.getTime();
+console.log(interval);
+interval = Math.floor(interval / (1000 * 60 * 60 * 24));
+
+console.log(`태어나서 ${interval}일 지났습니다.`);
+
+// let foo = [1, 30, 40, 50, 60, 70];
+// let zoo = [
+//   {
+//     name: '고구마',
+//     price: 1000
+//   },
+//   {
+//     name: '감자',
+//     price: 500
+//   },
+//   {
+//     name: '바나나',
+//     price: 1500
+//   }
+// ];
+
+// let bar = [
+//   {
+//     name: '바나나',
+//     price: 1500
+//   }
+// ]
+
+// 7-10 예제
+// let foo = [1, 30, 40, 50, 100];
+// // forEach()
+// foo.forEach((item, index) => {
+//   console.log(`${index}-${item}`);
+// });
+// console.log('==============');
+
+// //map()
+// let bar = foo.map((item, index) => {
+//   return item;
+// });
+// console.log(bar);
