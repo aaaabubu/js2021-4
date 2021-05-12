@@ -233,14 +233,14 @@ setTimeout (function() {
 // console.log(date);
 
 // 예제 7-7
-let now = new Date();
-let before = new Date('Octobor 30, 2020');
+// let now = new Date();
+// let before = new Date('Octobor 30, 2020');
 
-let interval = now.getTime() - before.getTime();
-console.log(interval);
-interval = Math.floor(interval / (1000 * 60 * 60 * 24));
+// let interval = now.getTime() - before.getTime();
+// console.log(interval);
+// interval = Math.floor(interval / (1000 * 60 * 60 * 24));
 
-console.log(`태어나서 ${interval}일 지났습니다.`);
+// console.log(`태어나서 ${interval}일 지났습니다.`);
 
 // let foo = [1, 30, 40, 50, 60, 70];
 // let zoo = [
@@ -278,3 +278,38 @@ console.log(`태어나서 ${interval}일 지났습니다.`);
 //   return item;
 // });
 // console.log(bar);
+// 함수 선언
+// function callThreeTimes(callback) {
+//   for (let i = 0; i < 3; i++) {
+//     callback();
+//   }
+// }
+
+// // 정상 실행
+// callThreeTimes(function() {console.log('안녕하세요');});
+
+// // 예외 발생
+// callThreeTimes();
+// 함수 선언
+// function callThreeTimes(callback) {
+//   if (callback){
+//   for (let i = 0; i < 3; i++) {
+//       callback();
+//     }
+//   } else {
+//     console.log('매개 변수 callback이 지정되지 않았습니다.');
+//   }
+// }
+
+// // 정상 실행
+// callThreeTimes(function() {console.log('안녕하세요');});
+
+// // 예외 발생
+// callThreeTimes();
+try {
+  // 예외 발생
+  error.error.error();
+} catch (e) {
+  console.log(e.name);
+  console.log(e.message);
+}

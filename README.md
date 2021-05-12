@@ -26,10 +26,11 @@ new Date(<년>, <월-1>, <일>, <시간>, <분>, <초>, <밀리초>): 시간요�
         let dateD = new Date(1991, 12-1, 9, 21, 30, 0, 0);
         console.log(dateD);
 실행 결과<br>
-Tue May 11 2021 17:38:22 GMT+0900 (대한민국 표준시)<br>
-Mon Dec 09 1991 21:30:00 GMT+0900 (대한민국 표준시)<br>
-Mon Dec 09 1991 21:30:00 GMT+0900 (대한민국 표준시)<br>
-Mon Dec 09 1991 21:30:00 GMT+0900 (대한민국 표준시)<br>
+
+      Tue May 11 2021 17:38:22 GMT+0900 (대한민국 표준시)
+      Mon Dec 09 1991 21:30:00 GMT+0900 (대한민국 표준시)
+      Mon Dec 09 1991 21:30:00 GMT+0900 (대한민국 표준시)
+      Mon Dec 09 1991 21:30:00 GMT+0900 (대한민국 표준시)
 * 시간 더하기<br>
 
          let date = new Date();
@@ -52,8 +53,9 @@ Mon Dec 09 1991 21:30:00 GMT+0900 (대한민국 표준시)<br>
 
         console.log(`태어나서 ${interval}일 지났습니다.`);
 실행 결과<br>
-16739144290<br>
-태어나서 193일 지났습니다.<br>
+
+      16739144290
+      태어나서 193일 지났습니다.
 
 ####<Array 객체><br>
 <b>Array 객체 메소드</b><br>
@@ -72,6 +74,113 @@ Mon Dec 09 1991 21:30:00 GMT+0900 (대한민국 표준시)<br>
       forEach():  배열의 요소를 하나씩 뽑아 반복을 돌림.
       map():      콜백 함수에서 리턴하는 것을 기반으로 새로운 배열을 만듦.
       filter():   콜백 함수에서 true를 리턴하는 것으로만 새로운 배열을 만들어 리턴.
+
+#### underscore.js 라이브러리<br>
+* script 태그를 추가해서 사용하는법<br>
+
+        <script src="http://underscorejs.org/underscore.js"></script>
+#### JSON 객체<br>
+<b>제약 사항</b><br>
+1 - 문자열은 큰따옴표로 만들어야 함.<br>
+2 - 모든 키는 큰따옴표로 감싸야함.<br>
+3 - 숫자, 문자열, 불 자료형만 사용할 수 있음.<br>
+
+* JSON 객체의 메소드<br>
+
+        JSON.stringify(<객체>,<변환 함수>,<공백 개수>):    자바스크립트 객체를 문자로 만듦
+        JSON.parse(<문자열>):                             문자열을 자바스크립트 객체로 파싱.
+## <예외 처리><br>
+예외는 두가지 방법으로 처리.<br>
+#### 1 - 기본 예외 처리<br>
+
+        // 함수 선언
+        function callThreeTimes(callback) {
+          for (let i = 0; i < 3; i++) {
+            callback();
+          }
+        }
+
+        // 정상 실행
+        callThreeTimes(function() {console.log('안녕하세요');});
+
+        // 예외 발생
+        callThreeTimes();
+실행결과<br>
+
+      안녕하세요
+      안녕하세요
+      안녕하세요
+      TypeError: callback is not a function
+
+<b>TypeError를 기본 예외 처리로 확인</b><br>
+
+        // 함수 선언
+        function callThreeTimes(callback) {
+          if (callback){
+          for (let i = 0; i < 3; i++) {
+              callback();
+            }
+          } else {
+            console.log('매개 변수 callback이 지정되지 않았습니다.');
+          }
+        }
+
+        // 정상 실행
+        callThreeTimes(function() {console.log('안녕하세요');});
+
+        // 예외 발생
+        callThreeTimes();
+실행 화면<br>
+
+      안녕하세요
+      안녕하세요
+      안녕하세요
+      매개 변수 callback이 지정되지 않았습니다.
+
+#### 2 - 고급 예외 처리<br>
+고급 예외 처리는 try 키워드, catch 키워드, finally 키워드로 예외 처리.<br>
+이를 try catch finally 구문. 기본 형태<br>
+
+      try {
+        // 예외가 발생
+      } catch (exception) {
+        // 여기서 처리
+      } finally {
+        // 여기는 무조건 실행
+      }
+다음과 같이 catch 구문 또는 finally 구문이 필요 없으면 해당 부분 생략 가능<br>
+
+      try {
+        //예외 발생
+      } catch (exception) {
+        //여기서 처리
+      }
+
+      ----------------------
+
+      try {
+        //예외 발생
+      } finally {
+        //여기는 무조건 실행
+      }
+#### 3 - 예외 객체<br>
+예외 객체에는 name 속성과 message 속성이 있음.<br>
+
+      try {
+        // 예외 발생
+        error.error.error();
+      } catch (e) {
+        console.log(e.name);
+        console.log(e.message);
+      }
+실행 화면<br>
+
+      ReferenceError
+      error is not defined
+#### 4 - 예외 강제 발생<br>
+예외를 강제로 발생시킬때는 throw키워드를 사용.<br>
+throw키워드 뒤에는 문자열 또는 Errorr객체를 입력.<br>
+<b>실제 실무에서는 개발할때 예외처리를 엄청나게 많이 사용하므로 예외 처리는 정확히 기억해두자!!!</b><br>
 
       
 
