@@ -1,4 +1,118 @@
 # 안진홍 [201840121]
+## [05월18일]
+>오늘 배운 내용 요약
+#### <전역 변수><br>
+아무런 변수를 사용하지 않고 모든 곳에서 사용할 수 있는 것들을 전역변수라고함.<br>
+<b>문자열 자료형의 전역 변수</b>
+
+      __filename:     현재 실행 중인 코드의 파일 경로를 나타냄.
+      __dirname:      현재 실행 중인 코드의 폴더 경로를 나타냄.
+<b>__filename,__dirname 출력</b><br>
+
+      console.log(__filename);
+      console.log(__dirname);
+#### <process 객체의 속성과 이벤트>
+Node.js는 process 객체라는 전역 객체를 제공.<br>
+<b>process 객체의 속성</b><br>
+
+      env:        컴퓨터 환경 정보를 나타냄.
+      version:    Node.js 버전을 나타냄.
+      versions:   Node.js와 종속된 프로그램 버전을 나타냄.
+      arch:       프로세서의 아키텍처를 나타냄.
+      platform:   플랫폼을 나타냄.
+<b>process 객체의 메소드</b><br>
+
+      exit([exitCode=0]):   프로그램을 종료.
+      memoryUsage():        메모리 사용 정보 객체를 리턴.
+      uptime():             현재 프로그램이 실행된 시간을 리턴.
+#### <process 객체와 이벤트 개요><br>
+<b>Node.js의 이벤트 연결 메소드</b><br>
+
+      on(<이벤트 이름>, <이벤트 핸들러>):   이벤트를 연결
+<b>process 객체의 이벤트</b><br>
+
+      exit:                 프로세스가 종료될 때 발생.
+      uncaughtException:    예외가 일어날 때 발생.
+#### <os 모듈><br>
+<b>os 모듈 사용 방법</b><br>
+
+      const os = require('os');
+
+<b>os 모듈</b><br>
+
+      hostname():               운영체제의 호스트이름을 리턴.
+      type():                   운영체제의 이름을 리턴.
+      platform():               운영체제의 플랫폼을 리턴.
+      arch():                   운영체제의 아키텍처를 리턴.
+      release():                운영체제의 버전을 리턴.
+      uptime():                 운영체제가 실행된 시간을 리턴.
+      loadavg():                로드 에버러지 정보를 담은 배열을 리턴.
+      totalmem():               시스템의 총메모리를 리턴.
+      freemem():                시스템의 사용 가능한 메모리를 리턴.
+      cpus():                   CPU의 정보를 담은 객체를 리턴.
+      getNetworkInterfaces():   네트워크 인터페이스의 정보를 담은 배열을리턴.
+#### <url모듈><br>
+<b>url모듈 사용 방법</b><br>
+
+      const url = require('url');
+
+<b>url모듈의 메소드</b><br>
+
+      parse(urlStr[, parseQueryString=false,slashesDenoteHost=false]): url문자열을 url객체로 변환해 리턴.
+      format(urlObj):           url객체를 url문자열로 변환해 리턴.
+      resolve(from,to):         매개 변수를 조합하여 완전한 url 문자열을 생성해 리턴.
+#### <File System><br>
+<b>fs 모듈 추출 방법</b><br>
+
+      const fs = require('fs');
+<b>파일 읽기 메소드</b><br>
+
+      fs.readFileSync(<파일 이름>):             동기적으로 파일을 읽어 들임.
+      fs.readFile(<파일 이름>, <콜백 함수>):    비동기적으로 차일을 읽어 들임.
+<b>파일 쓰기 메소드</b><br>
+
+      fs.writeFileSync(<파일 이름>, <문자열>):              동기적으로 파일을 씀.
+      fs.writerFile(<파일 이름>, <문자열>, <콜백 함수>):    비동기적으로 파일을 씀.
+#### <노드 패키지 매니저><br>
+어떤 프로그래밍 플랫폼이 기본적으로 제공하는 모듈을 '내부 모듈'이라고 함.<br>
+반면 개인 개발자가 내부 모듈을 조합해서 사용하기 쉬운 형태로 만들거나 새로운 기능을 구현해서 제공하는 것을 '외부 모듈'이라고 함.<br>
+<b>외부 모듈을 설치할때 사용하는 명령어</b><br>
+
+      > npm install <모듈 이름>
+      예> npm install express
+
+      > npm install <모듈 이름>@<버전>
+      예> npm install express@4
+      예> npm install express@4.2
+      예> npm install express@4.2.7
+#### <request 모듈><br>
+<b>request 모듈을 설치할때 사용하는 명령어</b><br>
+
+      > npm install request
+<b>request 모듈 추출</b><br>
+
+      // 모듈을 추출
+      const request = require('request');
+#### <cheerio 모듈><br>
+<b>cheerio 모듈을 설치할깨 사용하는 명령어</b><br>
+
+      > npm install cheerio
+<b>cheerio 모듈 추출</b><br>
+
+      // 모듈을 추출
+      const cheerio = require('cheerio');
+#### <async 모듈><br>
+<b>async 모듈을 설치할깨 사용하는 명령어</b><br>
+
+      > npm install async
+<b>async 모듈 추출</b><br>
+
+      // 모듈을 추출
+      const async = require('async');
+
+
+
+
 ## [05월 11일]
 >오늘 배운 내용 요약
 ##### <Date 객체><br>
