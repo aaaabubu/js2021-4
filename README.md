@@ -1,5 +1,123 @@
 # 안진홍 [201840121]
-## [05월18일]
+## [5월 25일]
+>오늘 배운 내용 요약
+## [express 모듈]<br>
+express 모듈은 다음과 같이 설치.<br>
+
+      $ npm install express@4
+#### <요청과 응답><br>
+<b>웹 서버가 하는 일은 요청과 응답의 연속이라고 정의.</b><br>
+<b>스트림: 프로그램이 프로그램 외부와 통신할 때는 컴퓨터 속에 흐르는 물길로 비유할 수 있는 스트림을 사용.</b><br>
+#### <express 모듈을 사용한 서버 생성과 실행><br>
+<b>express 모듈의 기본 메소드.</b><br>
+
+      express():    서버 애플리케이션 객체를 생성.
+      app.use():    요청이 왔을 때 실행할 함수를 지정.
+      app.listen(): 서버를 실행.
+<b>포트: 포트는 컴퓨터와 컴퓨터를 연결하는 정보의 출입구 역할을 하는 곳.</b><br>
+#### <페이지 라우팅><br>
+<b>express 모듈의 페이지 라우팅 메소드</b><br>
+
+      get(path, callback):        GET 요청이 발생했을 때 이벤트 리스너를 지정.
+      post(path, callback):       POST 요청이 발생했을 때 이벤트 리스너를 지정.
+      put(path, callback):        PUT 요청이 발생했을 때 이벤트 리스너를 지정.
+      delete(path, callback):     DELETE 요청이 발생했을 때 이벤트 리스너를 지정.
+      all(path, callback):        모든 요청이 발생했을 때 이벤트 리스너를 지정.
+<b>GET, POST, PUT, DELETE: 웹 요청을 할 때는 여러 정보를 서버에 전달.</b><br>
+#### <요청과 응답><br>
+<b>response 객체의 기본 메소드</b>
+
+      send():     데이터 본문울 제공.
+      status():   상태 코드를 제공.
+      set():      헤더를 설정.
+<b>send() 메소드의 매개 변수</b><br>
+send() 메소드는 매개 변수로 무엇을 넣는지에 따라 응답하는 형태가 바뀜.<br>
+<b>send() 메소드의 매개 변수 종류에 따른 응답.</b><br>
+
+      문자열:        html을 제공.
+      객체, 배열:   json을 제공.
+<b>MIME 형식</b><br>
+
+      text/plain:          기본적인 텍스트를 의미
+      text/html:           html 데이터를 의미
+      image/png:           png 데이터를 의미
+      audio/mpe:           MP3 음악 파일을 의미
+      video/mpeg:          MPEG 비디오 파일을 의미
+      application/json:    json 데이터를 의미
+      multipart/form-data: 입력 양식 데이터를 의미
+<b>Content-Type 지정 메소드</b><br>
+
+      type():  Content-Type을 MINE 형식으로 지정.
+<b>HTTP 상태 코드의 예</b><br>
+
+      1XX - 처리중 - 100 Continue
+      2XX - 성공 - 200 OK
+      3XX - 리다이렉트 - 300 Multiple Choices
+      4XX - 클라이언트 오류 - 400 Bad Request
+      5XX - 서버 오류 - 500 Internal Server Error
+<b>status() 메소드</b><br>
+
+      status():   상태 코드를 지정.
+<b>리다이렉트</b><br>
+<b>상태 코드 중에 3XX는 리다이렉트라고 하는 굉장히 특수한 상태의 코드.</b>
+<b>redirect() 메소드</b><br>
+
+      redirect():   리다이렉트.
+#### <request 객체><br>
+<b>주소 분석</b><br>
+
+      프로토콜:         HTTPS                         통신에 사용되는 규칙을 의미.
+      호스트:          (search.)naver.com             애플리케이션 서버(또는 분산 장치 등)의 위치를 의미.
+      URL:             search.naver                   애플리케이션 서버 내부에서 라우트 위치를 나타냄.
+      요청 매개 변수:   ?where=nexearch                추가적인 정보를 의미.
+                       &query=초콜릿
+                       &sm=top_hty
+                       &fbm=0
+                       &ie=utf8
+#### <미들웨어><br>
+<b>미들웨어 설정 메소드</b><br>
+
+      use():    미들웨어를 설정.
+##### morgan 미들웨어<br>
+
+      > npm install morgan
+##### body-parser 미들웨어<br>
+요청 본문을 분석.<br>
+<b>클라이언트에서 서버로 데이터 전송.</b><br>
+<b>요청 본문.</b><br>
+<b>다음과 같이 설치.</b><br>
+
+      > npm install body-parser
+<b>속성 정리</b><br>
+
+      params 객체:    URL의 토큰을 나타냄. 보기가 간편.
+      query 객체:     URL의 요청 매개 변수를 나타냄. 토큰보다 많은 데이터를 전달할 수 있으며, 주소로 어떤 데이터가 오고 가는지 확인할 수 있음.
+      body 객체:      대용량 문자열 등을 전송할 때 사용. 다만 주소에 데이터를 기록하지 못하므로 새로고침이나 즐겨찾기 기능 등을 활용할 수 없음.
+## [미니 프로젝트-RESTful 웹 서비스]<br>
+#### <RESTful 웹 서비스 개요><br>
+<b>RESTful 웹 서비스의 구조.</b><br>
+
+                    /collection                       /collection/id
+      GET:          컬렉션을 조회                      컬렉션의 특정 요소를 조회
+      POST:         컬렉션에 새로운 데이터를 추가       사용하지 않음
+      PUT:          컬렉션 전체를 한꺼번에 변경         컬렉션에 특정한 요소를 수정
+      DELETE:       컬렉션 전체를 삭제                 컬렉션의 특정 요소를 삭제
+<b>RESTful 웹 서비스</b><br>
+
+      GET:        /user         모든 사용자 정보를 조회
+      POST:       /user         사용자를 추가
+      GET:        /user/:id     특정 사용자 정보를 조회
+      PUT:        /user/:id     특정 사용자 정보를 수정
+      DELETE:     /user/:id     특정 사용자 정보를 제거
+##### Postman 크롬 애플리케이션<br>
+
+      Postman
+      https://www.getpostman.com
+
+
+
+
+## [05월 18일]
 >오늘 배운 내용 요약
 #### <전역 변수><br>
 아무런 변수를 사용하지 않고 모든 곳에서 사용할 수 있는 것들을 전역변수라고함.<br>
