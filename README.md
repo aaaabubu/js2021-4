@@ -1,5 +1,104 @@
 # 안진홍 [201840121]
-## [5월 25일]
+## [06월 01일]
+>오늘 배운 내용 요약
+
+#### let 키워드와 const 키워드<br>
+let 키워드와 const 키워드는 ECMAScript6 에서 추가된 기능<br>
+따라서 구버전의 웹 브라우저에서는 let 키워드와 const 키워드를 사용X<br>
+#### 템플릿 문자열<br>
+템플릿 문자열은 ECMAScript6 에서 추가된 기능<br>
+따라서 구버전의 웹 브라우저에서는 let 키워드와 const 키워드를 사용X<br>
+
+#### 화살표 함수<br>
+화살표 함수는 ECMAScript6 에서 추가된 기능<br>
+따라서 구버전의 웹 브라우저에서는 let 키워드와 const 키워드를 사용X<br>
+
+#### for of 문<br>
+for of 문은 ECMAScript6 에서 추가된 기능<br>
+따라서 구버전의 웹 브라우저에서는 let 키워드와 const 키워드를 사용X<br>
+
+### window 객체<br>
+window 객체는 웹 페이지 자체를 나타냄<br>
+
+      alert(<메시지>)                           경고장 출력
+      prompt(<메시지>, <임시 글자>)             프롬프트 출력
+### screen 객체속성<br>
+
+      width	        화면의 너비
+      height	화면의 높이
+      availWidth	실제 화면에서 사용 가능한 너비
+      availHeight	실제 화면에서 사용 가능한 높이
+      colorDepth	사용 가능한 색상 수
+      pixelDepth	한 픽셀당 비트 수
+### location 객체와 history 객체 속성과 메소드<br>
+
+      href	        문서의 URL 주소
+      host	        호스트 이름과 포트 번호
+      hostname	호스트 이름
+      port	        포트 번호
+      pathname	디렉터리 경로
+      hash	        앵커 이름(#~)
+      search	요청 매개 변수
+      protocol	프로토콜 종류
+메소드
+
+      assign(<링크>)      매개 변수로 전달한 위치로 이동
+      reload()	      새로고침
+      replace()	      매개 변수로 전달한 위치로 이동(뒤로 가기 불가능)
+### navigator 객체 속성<br>
+
+      appCodeName	웹 브라우저의 코드 이름
+      appName	웹 브라우저의 이름
+      appVersion	웹 브라우저의 버전
+      platform	사용 중인 운영체제의 시스템 환경
+      userAgent	웹 브라우저의 전체적인 정보
+## jQuery
+#### jQrey 객체<br>
+
+      window.jQuery = windows.$ = jQuery;
+#### 문서 객체 선택<br>
+객체 탐색 메소드<br>
+
+      parent()	부모 태그를 선택
+      find()	후손 태그를 찾음
+#### 문서 객체 개별 조작<br>
+선택된 문서 객체의 수<br>
+
+      length	선택된 문서 객체의 수를 구함
+선택된 문서 객체 추출<br>
+
+      get()	      선택한 문서 객체 중 하나를 선택
+선택된 문서 객체 반복 적용<br>
+
+      each()      선택한 문서 객체에 반복을 적용
+#### 문서 객체 조작<br>
+문자 조작 메소드<br>
+
+      text()	html 태그 내부의 문자를 조작
+      html()	html 태그 내부의 문자를 조작
+스타일 조작 메소드<br>
+
+      css()       스타일을 조작
+속성 조작 메소드<br>
+
+      attr()      속성을 조작
+### 문서 객체 생성$('<h1></h1>')
+문서 객체를 생성할 때는 다음과 같이 $() 함수의 매개 변수에 'HTML 형식의 문자열'을 입력함<br>
+
+      $('<h1></h1>')
+### 이벤트<br>
+jQery의 이벤트 메소드<br>
+
+      on()	이벤트를 연결
+      off()	이벤트를 제거
+#### 이벤트 직접 연결<br>
+
+      $(<선택자>).on(<이벤트 이름>, <콜백 함수>)
+
+
+
+
+## [05월 25일]
 >오늘 배운 내용 요약
 ## [express 모듈]<br>
 express 모듈은 다음과 같이 설치.<br>
